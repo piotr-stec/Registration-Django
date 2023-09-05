@@ -1,0 +1,125 @@
+{% extends "register/base.html" %}
+{% block content %}
+
+<div class="contact-container">
+  <h2>Zapisy na zajęcia</h2>
+  <form id="contact-form" method="post">
+    {% csrf_token %}
+      <input type="text" id="child-name" name="child_name" placeholder="Imię i nazwisko ucznia" required>
+      <input type="text" id="child-class" name="child_class" placeholder="Klasa ucznia"  required>
+      <input type="text" id="parent-name1" name="parent_name1" placeholder="Imię i nazwisko rodzica (wymagane)"  required>
+      <input type="text" id="parent-name2" name="parent_name2" placeholder="Imię i nazwisko rodzica (opcjonalne)" >
+      <input type="text" id="parent-phone-number1" name="parent_phone_number1" placeholder="Numer telefonu rodzica (wymagane)" required>
+      <input type="text" id="parent-phone-number2" name="parent_phone_number2" placeholder="Numer telefonu rodzica (opcjonalne)">
+      <input type="email" id="email" name="email" placeholder="Adres email (opcjonalne)" >
+
+      <select name="swietlica" required>
+          <option value="" disabled selected hidden>Czy uczęszcza do świetlicy</option>
+          <option value="tak">Tak</option>
+          <option value="nie">Nie</option>
+      </select>
+
+      <select name="payment" required>
+          <option value="" disabled selected hidden>Forma płatności</option>
+          <option value="semestralnie">Semestralnie</option>
+         <option value="za każde zajęcia">Za każde zajęcia</option>
+      </select>
+
+      <button type="submit" class="submit-button">Zgłoś na zajęcia</button>
+  </form>
+</div>
+
+
+
+<style>
+
+.contact-container {
+  max-width: 500px; /* Zwiększamy maksymalną szerokość kontenera */
+  margin: 0 auto;
+  padding: 40px; /* Zwiększamy wewnętrzny padding kontenera */
+  background-color: #f0f0f0;
+  border-radius: 10px; /* Zwiększamy zaokrąglenie rogów kontenera */
+  margin-top: 30px; /* Zwiększamy margines na górze kontenera */
+}
+{##}
+{#/* Zwiększamy rozmiar fontu wewnątrz kontenera */#}
+{#.contact-container p {#}
+{#  font-size: 16px;#}
+{#}#}
+{##}
+{#h2 {#}
+{#  color: #333;#}
+{#  text-align: center;#}
+{#  margin-bottom: 20px;#}
+{#}#}
+{##}
+input {
+  width: 460px; /* Rozciągamy pole input na całą szerokość kontenera */
+  padding: 20px; /* Zwiększamy wewnętrzny padding pola input */
+  margin-bottom: 15px; /* Zwiększamy margines na dół pola input */
+  border-radius: 10px; /* Zwiększamy zaokrąglenie rogów pola input */
+  border: 1px solid #ccc; /* Dodajemy obramowanie do pola input */
+  font-size: 16px; /* Zwiększamy rozmiar fontu w polu input */
+}
+
+.submit-button{
+  display: block;
+  width: 100%;
+  padding: 20px; /* Zwiększamy padding przycisku */
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px; /* Zwiększamy rozmiar fontu przycisku */
+  border-radius: 10px; /* Zwiększamy zaokrąglenie rogów przycisku */
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+
+
+{#.submit-button {#}
+
+
+/* Dodaj styl do elementu select */
+select {
+  width: 500px;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff; /* Tło selecta na biało */
+  color: #333; /* Kolor tekstu */
+  cursor: pointer; /* Kursor podczas najechania */
+  font-size: 16px;
+
+}
+
+/* Styluj rozwijaną listę */
+select option {
+  background-color: #fff; /* Tło opcji na biało */
+  color: #333; /* Kolor tekstu opcji */
+  font-size: 20px; /* Zwiększamy rozmiar fontu w polu input */
+
+}
+
+/* Styluj hover nad opcjami */
+select option:hover {
+  background-color: #f0f0f0; /* Kolor tła podczas najechania */
+
+}
+
+
+</style>
+{% endblock %}

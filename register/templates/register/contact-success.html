@@ -1,0 +1,64 @@
+{% extends 'register/base.html' %}
+{% block content %}
+<div class="contact-success-container">
+  <h2>Dziękujemy!</h2>
+  <p>Zapis na zajęcia przebiegł pomyślnie.</p>
+  <p>Odpowiemy tak szybko, jak to możliwe.</p>
+  <a href={% url 'contact' %} class="btn">Powrót do zapisów</a>
+</div>
+
+<style>
+.contact-success-container {
+  max-width: 400px;
+  margin: 15px auto 0;
+  padding: 20px;
+  background-color: #F8F9FA;
+  border: 1px solid #CED4DA;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.contact-success-container h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #212529;
+}
+
+.contact-success-container p {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #212529;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #FFF;
+  text-decoration: none;
+  border-color: #3f51b5;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  margin: auto;
+
+}
+
+.btn:hover {
+  background-color: #0069D9;
+}
+
+.btn:focus {
+  outline: none;
+}
+</style>
+{% endblock %}
