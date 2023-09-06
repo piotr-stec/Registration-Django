@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 payment_OPTIONS = (
     ('semestralnie', 'Semestralnie'),
-    ('za każde zajecia', 'Za każde zajęcia'),
+    ('za każde zajęcia', 'Za każde zajęcia'),
 )
 swietlica_OPTIONS = (
     ('tak', 'Tak'),
