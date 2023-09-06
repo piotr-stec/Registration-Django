@@ -299,6 +299,6 @@ pyvenv.cfg
 pip-selfcheck.json
 
 # End of https://www.toptal.com/developers/gitignore/api/python,pycharm,venv
-
-db.sqlite3
-secret.py
+#
+#db.sqlite3
+#secret.py
