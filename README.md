@@ -1,1 +1,1 @@
-Django-based Extracurricular Classes Registration Website 
+# Django-based Extracurricular Classes Registration Website 
