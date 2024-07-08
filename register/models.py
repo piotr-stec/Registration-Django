@@ -36,4 +36,3 @@ class ContactModel(models.Model):
     def __str__(self):
         return f"{self.child_name} {self.parent_name1} {self.child_class}"
 
-print("test")
